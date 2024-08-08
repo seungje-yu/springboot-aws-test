@@ -5,6 +5,8 @@ import com.coffit.demo.web.domain.posts.service.PostsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
+
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
@@ -13,6 +15,7 @@ public class PostsApiController {
 
     @PostMapping("/api/v1/posts")
     public Long save(@RequestBody PostsSaveRequestDto requestDto) {
+
         return postsService.save(requestDto);
     }
 

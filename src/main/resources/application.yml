@@ -7,7 +7,9 @@ spring:
     console:
       enabled: true
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:mem:testdb;NON_KEYWORDS=USER
+  profiles:
+    include: oauth
 server:
   servlet:
     encoding:
